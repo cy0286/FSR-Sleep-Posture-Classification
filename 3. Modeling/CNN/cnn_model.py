@@ -10,7 +10,7 @@ from sklearn.model_selection import GroupKFold
 
 os.chdir("C:/Users/송채영/Desktop/송채영/HAI/code/model")
 
-model_config = np.array([[16, 32, 64],     # channel each convolution layer
+model_config = np.array([[16, 32, 64],    # channel each convolution layer
                          [2, 2, 2],       # kernel size of convolution layer
                          [1, 1, 1],       # stride size of convolution layer
                          [2, 2, 2],       # kernel size of pooling layer
@@ -83,10 +83,8 @@ def sample_data_from_segments(data, labels, num_samples_per_segment=5):
         range(240, 320)
     ]
     for segment in segment_indices:
-        # Randomly sample `num_samples_per_segment` images from the current segment
         selected_indices = np.random.choice(segment, num_samples_per_segment, replace=False)
         
-        # Collect the sampled data and labels
         sampled_data.append(data[selected_indices])
         sampled_labels.append(labels[selected_indices])
 

@@ -27,7 +27,12 @@ log_file_path = "C:/Users/송채영/Desktop/송채영/HAI/code/model/training_lo
 
 # List of ViT models with 224 input size
 vit_models = [
-    'vit_tiny_patch16_224'
+    'vit_tiny_patch16_224',
+    'vit_small_patch16_224',
+    'vit_base_patch8_224',
+    'vit_base_patch16_224',
+    'vit_base_patch32_224',
+    'vit_large_patch16_224'
 ]
 
 # Dataset class
